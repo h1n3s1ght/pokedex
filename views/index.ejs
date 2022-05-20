@@ -14,8 +14,10 @@
 <div class="each">
     <a href="http://localhost:3000/pokedex/<%= i%>">
       <h3><%= parseInt(poke[i].id)%>: <%= poke[i].name%></h3>
-      <img src="<%= poke[i].img%>" />
-    </div></a>
+      <img src="<%= poke[i].img%>" /></a>
+    <form action="/pokedex/<%=i; %>?_method=DELETE" method="POST">
+          <input type="submit" value="DELETE" />
+        </form></div>
     <% } %>
     </div>
   </body>

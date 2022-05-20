@@ -165,3 +165,7 @@ nav a:hover {
 .damages {
     margin-left: 5%;
 }
+
+input {
+    color: black;
+}
