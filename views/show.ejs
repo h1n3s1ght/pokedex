@@ -1,0 +1,101 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <%- include('./partials/head.ejs')%>
+      <title>Show Page for <%= poke.name%> </title>
+  </head>
+  <body>
+      <header>
+          <h1><%= poke.name%></h1>
+          <%- include('./partials/header.ejs')%>
+      </header>
+  <div class="container">
+       <h3><%= parseInt(poke.id)%>: <%= poke.name%></h3>
+      <img src="<%= poke.img%>" />
+    </div>
+    <h5>
+        Type: <% for (let a = 0; a < poke.type.length; a++){%>
+        <td><%= poke.type[a] %></td>
+        <%}%>
+      </h5>
+      <div class="stats">
+        <h5>Stats:</h5>
+        <table>
+          <tr></tr>
+        </table>
+      </div>
+      <div class="damages">
+        <h5>Damages:</h5>
+        <table>
+          <tr>
+            <td>Normal</td>
+            <td><%= poke.damages.normal%></td>
+          </tr>
+          <tr>
+            <td>Fire</td>
+            <td><%= poke.damages.fire%></td>
+          </tr>
+          <tr>
+            <td>Water</td>
+            <td><%= poke.damages.water%></td>
+          </tr>
+          <tr>
+            <td>Electric</td>
+            <td><%= poke.damages.electric%></td>
+          </tr>
+          <tr>
+            <td>Grass</td>
+            <td><%= poke.damages.grass%></td>
+          </tr>
+          <tr>
+            <td>Ice</td>
+            <td><%= poke.damages.ice%></td>
+          </tr>
+          <tr>
+            <td>Fighting</td>
+            <td><%= poke.damages.fight%></td>
+          </tr>
+          <tr>
+            <td>Poison</td>
+            <td><%= poke.damages.poison%></td>
+          </tr>
+          <tr>
+            <td>Ground</td>
+            <td><%= poke.damages.ground%></td>
+          </tr>
+          <tr>
+            <td>Flying</td>
+            <td><%= poke.damages.flying%></td>
+          </tr>
+          <tr>
+            <td>Psychic</td>
+            <td><%= poke.damages.psychic%></td>
+          </tr>
+          <tr>
+            <td>Bug</td>
+            <td><%= poke.damages.bug%></td>
+          </tr>
+          <tr>
+            <td>Rock</td>
+            <td><%= poke.damages.rock%></td>
+          </tr>
+          <tr>
+            <td>Ghost</td>
+            <td><%= poke.damages.ghost%></td>
+          </tr>
+          <tr>
+            <td>Dragon</td>
+            <td><%= poke.damages.dragon%></td>
+          </tr>
+          <tr>
+            <td>Dark</td>
+            <td><%= poke.damages.dark%></td>
+          </tr>
+          <tr>
+            <td>Steel</td>
+            <td><%= poke.damages.steel%></td>
+          </tr>
+        </table>
+      </div>
+      </body>
+  </html>
