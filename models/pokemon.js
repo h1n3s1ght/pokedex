@@ -1,4 +1,4 @@
-module.exports = [
+let poke = [
   {
     id: "001",
     name: "Bulbasaur",
@@ -61603,3 +61603,5 @@ module.exports = [
     },
   },
 ];
+
+module.exports = poke;

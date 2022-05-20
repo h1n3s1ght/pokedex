@@ -56,11 +56,13 @@ app.post("/pokedex", (req, res) => {
     res.redirect('http://localhost:3000/pokedex');
 });
         //===== Update / PUT =====
-app.put('/pokedex/:id', (req, res, next) => {
+app.put('/pokedex/:id', (req, res) => {
         //Set info from the selected id to the new information user inputs
-    poke[req.params.id].type = JSON.parse(JSON.stringify(req.body));
-    console.log(poke[req.params.id])
-     console.log(poke[req.params.id].type)
+        // poke[req.params.id] = req.body;
+    poke[req.params.id].type = JSON.parse(JSON.stringify(req.body.type));
+     poke[req.params.id].name = JSON.parse(JSON.stringify(req.body.name));
+    console.log(poke[req.params.id]);
+    //  console.log(poke[req.params.id].type);
          //Redirect the page after updating to the main page
     res.redirect('/pokedex');
 });

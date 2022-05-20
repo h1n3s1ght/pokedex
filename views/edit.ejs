@@ -11,8 +11,35 @@
 </header>
 <div class="show" id="formula">
 <form action="/pokedex/<%=index;%>?_method=PUT" method="POST">
+      Name: <input type="text" name="name" value="<%= poke.name%>"/><br />
       Type: <input type="text" name="type" value="<%= poke.type%>"/><br />
       <br />
+
+
+      <!-- Create Hidden Variables for the portions that we dont want users to change. -->
+      <input value="<%=poke.id%>" type="hidden" name="id">
+      <input value="<%=poke.img%>" type="hidden" name="img">
+      <input value="<%=poke.stats%>" type="hidden" name="stats">
+      <input value="<%=poke.damages.normal%>" type="hidden" name="damages.normal">
+      <input value="<%=poke.damages.fire%>" type="hidden" name="damages.fire">
+      <input value="<%=poke.damages.water%>" type="hidden" name="damages.water">
+      <input value="<%=poke.damages.electric%>" type="hidden" name="damages.electric">
+      <input value="<%=poke.damages.grass%>" type="hidden" name="damages.grass">
+      <input value="<%=poke.damages.ice%>" type="hidden" name="damages.ice">
+      <input value="<%=poke.damages.fight%>" type="hidden" name="damages.fight">
+      <input value="<%=poke.damages.poison%>" type="hidden" name="damages.poison">
+      <input value="<%=poke.damages.ground%>" type="hidden" name="damages.ground">
+      <input value="<%=poke.damages.flying%>" type="hidden" name="damages.flying">
+      <input value="<%=poke.damages.psychic%>" type="hidden" name="damages.psychic">
+      <input value="<%=poke.damages.bug%>" type="hidden" name="damages.bug">
+      <input value="<%=poke.damages.rock%>" type="hidden" name="damages.rock">
+      <input value="<%=poke.damages.ghost%>" type="hidden" name="damages.ghost">
+      <input value="<%=poke.damages.dragon%>" type="hidden" name="damages.dragon">
+      <input value="<%=poke.damages.dark%>" type="hidden" name="damages.dark">
+      <input value="<%=poke.damages.steel%>" type="hidden" name="damages.steel">
+
+
+
       <input type="submit" value="Submit Changes" />
       <a href="http://localhost:3000/pokedex"><button type="button">Nevermind | Back to Home</a></button>
     </form>
