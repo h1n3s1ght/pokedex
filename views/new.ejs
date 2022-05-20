@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create New Pokemon</title>
+    <%- include('./partials/head.ejs')%>
+</head>
+<body>
+    <header>
+        <h1>Team Rocket Lab | Make a New Pokemon</h1>
+        <%- include('./partials/header.ejs')%>
+    </header>
+    <div class="show" id="formStuff">
+        <h5>Fill out this Form(ula) to make your Pokemon</h5>
+        </div>
+        <div class="show" id="formula">
+        <form>
+            Name: <input type="text" required name="name" placeholder="snivy"/> <br />
+            Type: <input type="text" required name="type" placeholder="grass"/> <br />
+            Image Link (leave URL): <input type="text" name="img" placeholder="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkw71GZVVNS2FjlQ4LJK5MWTD3B1ai8mymKg&usqp=CAU"/> <br />
+            <button type="button">Submit</button>
+            <a href="http://localhost:3000/pokedex"><button type="button">Nevermind | Back to Home</a></button>
+        </form>
+    </div>
+</body>
+</html>

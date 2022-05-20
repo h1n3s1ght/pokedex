@@ -6,22 +6,69 @@
   </head>
   <body>
       <header>
-          <h1><%= poke.name%></h1>
+          <h1><%=parseInt(poke.id)%>  |  <%= poke.name%></h1>
           <%- include('./partials/header.ejs')%>
       </header>
-  <div class="container">
-       <h3><%= parseInt(poke.id)%>: <%= poke.name%></h3>
-      <img src="<%= poke.img%>" />
-    </div>
-    <h5>
-        Type: <% for (let a = 0; a < poke.type.length; a++){%>
-        <td><%= poke.type[a] %></td>
+       <div class="show" id="show">
+           <h5><%=parseInt(poke.id)%>  |  <%= poke.name%></h5>
+      <h5>Type: <% for (let a = 0; a < poke.type.length; a++){%>
+        <%= poke.type[a] %>
         <%}%>
-      </h5>
+        </h5>
+        </div>
+        <div class="show" id="showTwo">
+      <img src="<%= poke.img%>" />
       <div class="stats">
         <h5>Stats:</h5>
         <table>
-          <tr></tr>
+          <tr>
+              <td>
+                  HP:
+              </td>
+              <td>
+                  <%= poke.stats.hp%>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Attack:
+              </td>
+              <td>
+                  <%= poke.stats.attack%>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Defense:
+              </td>
+              <td>
+                  <%= poke.stats.defense%>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Speed Attack:
+              </td>
+              <td>
+                  <%= poke.stats.spattack%>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Speed Defense:
+              </td>
+              <td>
+                  <%= poke.stats.spdefense%>
+              </td>
+          </tr>
+          <tr>
+              <td>
+                  Speed:
+              </td>
+              <td>
+                  <%= poke.stats.speed%>
+              </td>
+          </tr>
         </table>
       </div>
       <div class="damages">
@@ -96,6 +143,7 @@
             <td><%= poke.damages.steel%></td>
           </tr>
         </table>
+       </div>
       </div>
       </body>
   </html>
