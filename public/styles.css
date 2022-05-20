@@ -1,13 +1,68 @@
-body {
+html, body {
     margin: 0 auto;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-image: url(./images/PokemonImg.png);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
+}
+
+p {
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    color: blue;
+}
+
+header {
+    background-color: rgba(0,0,0,.7);
+    border-radius: 0px 0px 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: right;
+    margin: 0 auto;
+}
+
+header h1 {
+    color: white;
+    font-size: 1.5em;
+    width: 50%;
+    padding-top: 2%;
+    margin-right: 25%;
+    left: 0%;
+    top: 0%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    left: 50%;
+    padding-top: 3%;
+    width: 100%;
+}
+
+nav li {
+    margin-top: 5%;
+    padding: 0% 1% 3% 1%;
+    width: 100%;
+}
+
+nav a {
+    text-align: left;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: gray;
 }
