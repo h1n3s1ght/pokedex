@@ -2,10 +2,20 @@
 <html lang="en">
 <head>
     <title>Edit: <%=poke.name%></title>
+    <%- include('./partials/head.ejs')%>
 </head>
 <body>
     <header>
     <h1>Edit: <%=poke.name%></h1>
+    <%- include('./partials/header.ejs')%>
 </header>
+<div class="show" id="formula">
+<form action="/pokedex/<%=index%>?_method=PUT" method="POST">
+      Name: <input type="text" name="" /><br />
+      <br />
+      <input type="submit" name="" value="Submit Changes" />
+      <a href="http://localhost:3000/pokedex"><button type="button">Nevermind | Back to Home</a></button>
+    </form>
+    </div>
 </body>
 </html>
