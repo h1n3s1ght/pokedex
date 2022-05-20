@@ -58,8 +58,9 @@ app.post("/pokedex", (req, res) => {
         //===== Update / PUT =====
 app.put('/pokedex/:id', (req, res, next) => {
         //Set info from the selected id to the new information user inputs
-    poke[req.params.id] = JSON.parse(JSON.stringify(req.body));
-     console.log(poke[req.params.id]);
+    poke[req.params.id].type = JSON.parse(JSON.stringify(req.body));
+    console.log(poke[req.params.id])
+     console.log(poke[req.params.id].type)
          //Redirect the page after updating to the main page
     res.redirect('/pokedex');
 });

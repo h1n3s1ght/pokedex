@@ -10,10 +10,10 @@
     <%- include('./partials/header.ejs')%>
 </header>
 <div class="show" id="formula">
-<form action="/pokedex/<%=index%>?_method=PUT" method="POST">
-      Name: <input type="text" name="" /><br />
+<form action="/pokedex/<%=index;%>?_method=PUT" method="POST">
+      Type: <input type="text" name="type" value="<%= poke.type%>"/><br />
       <br />
-      <input type="submit" name="" value="Submit Changes" />
+      <input type="submit" value="Submit Changes" />
       <a href="http://localhost:3000/pokedex"><button type="button">Nevermind | Back to Home</a></button>
     </form>
     </div>
