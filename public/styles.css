@@ -153,6 +153,11 @@ button:hover , a:hover{
     margin-top: 3%;
 }
 
+ .show a{
+   margin-left: 2%;
+  padding-top:5%;
+}
+
 #formula{
   border-radius: 0px 0px 15px 15px;
 }

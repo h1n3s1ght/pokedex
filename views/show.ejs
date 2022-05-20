@@ -6,16 +6,17 @@
   </head>
   <body>
       <header>
-          <h1><%=parseInt(poke.id)%>  |  <%= poke.name%></h1>
+          <h1><strong>View | </strong> <%= poke.name%></h1>
           <%- include('./partials/header.ejs')%>
       </header>
        <div class="show" id="show">
            <h5><%=parseInt(poke.id)%>  |  <%= poke.name%></h5>
       <h5>Type: <%= poke.type %>
         </h5>
+        <a href="/pokedex/<%=(parseInt(poke.id)-1)%>/edit"><button>EDIT</button></a>
         </div>
         <div class="show" id="showTwo">
-      <img src="<%= poke.img%>" />
+      <img src="<%= poke.img%>" /> <br />
       <div class="stats">
         <h5>Stats:</h5>
         <table>
