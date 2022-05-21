@@ -3,6 +3,10 @@
 <head>
     <title>Create New Pokemon</title>
     <%- include('./partials/head.ejs')%>
+    <script>
+    // let newID = (parseInt(poke.length) +1);
+    console.log(poke);
+    </script>
 </head>
 <body>
     <header>
@@ -15,8 +19,34 @@
         <div class="show" id="formula">
         <form action="/pokedex" method="POST">
             Name: <input type="text" required name="name" placeholder="snivy"/> <br />
+             ID: <input type="text" required name="id" placeholder="newID"/> <br />
             Type: <input type="text" required name="type" placeholder="grass"/> <br />
             Image Link (leave URL): <input type="text" name="img" placeholder="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkw71GZVVNS2FjlQ4LJK5MWTD3B1ai8mymKg&usqp=CAU"/> <br />
+            <br /> <br /><h5>Stats(0-100) |</h5>
+              HP | <br /> <br /><input value="50" type="number" min="0" max="100" name="hp">
+              Attack | <br /> <br /><input value="50" type="number" min="0" max="100" name="attack">
+              Defense | <br /> <br /><input value="50" type="number" min="0" max="100" name="defense">
+             Speed Attack | <br /> <br /><input value="50" type="number" min="0" max="100" name="spattack">
+              Speed Defense | <br /> <br /><input value="50" type="number" min="0" max="100" name="spdefense">
+              Speed | <br /> <br /><input value="50" type="number" min="0" max="100" name="speed">
+    <br /> <br /><h5>Damages Against (0-3) |</h5>
+      Normal | <br /> <br /><input value="1" type="number" min="0" max="3" name="normal">
+      Fire | <br /> <br /><input value="0" type="number" min="0" max="3" name="fire">
+      Water | <br /> <br /><input value="1" type="number" min="0" max="3"name="water">
+      Electric | <br /> <br /><input value="1" type="number" min="0" max="3" name="electric">
+      Grass | <br /> <br /><input value="0"type="number" min="0" max="3" name="grass">
+      Ice | <br /> <br /><input value="1" type="number" min="0" max="3" name="ice">
+      Fight | <br /> <br /><input value="1" type="number" min="0" max="3" name="fight">
+      Poison | <br /> <br /><input value="0" type="number" min="0" max="3" name="poison">
+      Ground | <br /> <br /><input value="2" type="number" min="0" max="3" name="ground">
+     Flying |  <br /> <br /><input value="0" type="number" min="0" max="3" name="flying">
+      Psychic | <br /> <br /><input value="2" type="number" min="0" max="3" name="psychic">
+      Bug | <br /> <br /><input value="2" type="number" min="0" max="3" name="bug">
+      Rock |<br /> <br /><input value="3" type="number" min="0" max="3" name="rock">
+     Ghost | <br /> <br /> <input value="0" type="number" min="0" max="3" name="ghost">
+      Dragon | <br /> <br /><input value="1" type="number" min="0" max="3" name="dragon">
+      Dark | <br /> <br /><input value="2" type="number" min="0" max="3" name="dark">
+     Steel | <br /> <br /> <input value="1" type="number" min="0" max="3" name="steel">
             <button type="submit">Submit</button>
             <a href="http://localhost:3000/pokedex" class="moveLeft"><button type="button">Nevermind | Back to Home </a></button>
         </form>

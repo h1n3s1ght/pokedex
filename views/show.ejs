@@ -25,7 +25,11 @@
                   HP:
               </td>
               <td>
+                <% if(parseInt(poke.id) <= 151) { %>
                   <%= poke.stats.hp%>
+                <% } else {%>
+                  <%= poke.hp%>
+               <% } %>
               </td>
           </tr>
           <tr>
@@ -33,7 +37,11 @@
                   Attack:
               </td>
               <td>
+                <% if(parseInt(poke.id) <= 151) { %>
                   <%= poke.stats.attack%>
+                <% } else {%>
+                  <%= poke.attack%>
+               <% } %>
               </td>
           </tr>
           <tr>
@@ -41,7 +49,12 @@
                   Defense:
               </td>
               <td>
+                <% if(parseInt(poke.id) <= 151) { %>
                   <%= poke.stats.defense%>
+                <% } else {%>
+                  <%= poke.defense%>
+               <% } %>
+                  
               </td>
           </tr>
           <tr>
@@ -49,7 +62,11 @@
                   Speed Attack:
               </td>
               <td>
+                <% if(parseInt(poke.id) <= 151) { %>
                   <%= poke.stats.spattack%>
+                <% } else {%>
+                  <%= poke.spattack%>
+               <% } %>
               </td>
           </tr>
           <tr>
@@ -57,7 +74,11 @@
                   Speed Defense:
               </td>
               <td>
+                <% if(parseInt(poke.id) <= 151) { %>
                   <%= poke.stats.spdefense%>
+                <% } else {%>
+                  <%= poke.spdefense%>
+               <% } %>
               </td>
           </tr>
           <tr>
@@ -65,7 +86,11 @@
                   Speed:
               </td>
               <td>
+                <% if(parseInt(poke.id) <= 151) { %>
                   <%= poke.stats.speed%>
+                <% } else {%>
+                  <%= poke.speed%>
+               <% } %>
               </td>
           </tr>
         </table>
@@ -76,72 +101,171 @@
           <tr>
             <td>Normal</td>
             <td>
-            <%= poke.damages.normal%>
+              <% if(parseInt(poke.id) <= 151) { %>
+                  <%= poke.damages.normal%>
+                <% } else {%>
+                  <%= poke.normal%>
+               <% } %>
             </td>
           </tr>
           <tr>
             <td>Fire</td>
-            <td><%= poke.damages.fire%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                  <%= poke.damages.fire%>
+                <% } else {%>
+                  <%= poke.fire%>
+               <% } %>
+              </td>
           </tr>
           <tr>
             <td>Water</td>
-            <td><%= poke.damages.water%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                  <%= poke.damages.water%>
+                <% } else {%>
+                  <%= poke.water%>
+               <% } %>
+              </td>
           </tr>
           <tr>
             <td>Electric</td>
-            <td><%= poke.damages.electric%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                  <%= poke.damages.electric%>
+                <% } else {%>
+                  <%= poke.electric%>
+               <% } %>
+              </td>
           </tr>
           <tr>
             <td>Grass</td>
-            <td><%= poke.damages.grass%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                 <%= poke.damages.grass%>
+                <% } else {%>
+                  <%= poke.grass%>
+               <% } %>
+            </td>
           </tr>
           <tr>
             <td>Ice</td>
-            <td><%= poke.damages.ice%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                  <%= poke.damages.ice%>
+                <% } else {%>
+                  <%= poke.ice%>
+               <% } %>
+              </td>
           </tr>
           <tr>
             <td>Fighting</td>
-            <td><%= poke.damages.fight%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                  <%= poke.damages.fight%>
+                <% } else {%>
+                  <%= poke.fight%>
+               <% } %>
+              </td>
           </tr>
           <tr>
             <td>Poison</td>
-            <td><%= poke.damages.poison%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                  <%= poke.damages.poison%>
+                <% } else {%>
+                  <%= poke.poison%>
+               <% } %>
+              </td>
           </tr>
           <tr>
             <td>Ground</td>
-            <td><%= poke.damages.ground%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                  <%= poke.damages.ground%>
+                <% } else {%>
+                  <%= poke.ground%>
+               <% } %>
+              </td>
           </tr>
           <tr>
             <td>Flying</td>
-            <td><%= poke.damages.flying%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                 <%= poke.damages.flying%>
+                <% } else {%>
+                  <%= poke.flying%>
+               <% } %>
+              </td>
           </tr>
           <tr>
             <td>Psychic</td>
-            <td><%= poke.damages.psychic%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                  <%= poke.damages.psychic%>
+                <% } else {%>
+                  <%= poke.psychic%>
+               <% } %>
+              </td>
           </tr>
           <tr>
             <td>Bug</td>
-            <td><%= poke.damages.bug%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                 <%= poke.damages.bug%>
+                <% } else {%>
+                 <%= poke.bug%>
+               <% } %>
+              </td>
           </tr>
           <tr>
             <td>Rock</td>
-            <td><%= poke.damages.rock%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                 <%= poke.damages.rock%>
+                <% } else {%>
+                  <%= poke.rock%>
+               <% } %>
+              </td>
           </tr>
           <tr>
             <td>Ghost</td>
-            <td><%= poke.damages.ghost%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                  <%= poke.damages.ghost%>
+                <% } else {%>
+                  <%= poke.ghost%>
+               <% } %>
+              </td>
           </tr>
           <tr>
             <td>Dragon</td>
-            <td><%= poke.damages.dragon%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                  <%= poke.damages.dragon%>
+                <% } else {%>
+                  <%= poke.dragon%>
+               <% } %>
+              </td>
           </tr>
           <tr>
             <td>Dark</td>
-            <td><%= poke.damages.dark%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                  <%= poke.damages.dark%>
+                <% } else {%>
+                  <%= poke.dark%>
+               <% } %>
+              </td>
           </tr>
           <tr>
             <td>Steel</td>
-            <td><%= poke.damages.steel%></td>
+            <td>
+              <% if(parseInt(poke.id) <= 151) { %>
+                  <%= poke.damages.steel%>
+                <% } else {%>
+                  <%= poke.steel%>
+               <% } %></td>
           </tr>
         </table>
        </div>

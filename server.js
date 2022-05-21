@@ -1,10 +1,10 @@
 //========== Variables ===========
         //Set up Express and App variables for future use
 const express = require('express');
-const app = express();
-
         //Bring Data from pokemon.js
 const poke = require('./models/pokemon');
+
+const app = express();
 
 //========== Listener ============
         //Set up PORT number as standard 3000
@@ -20,6 +20,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));
         //Include Method Override
 const methodOverride = require('method-override');
+const { resolveInclude } = require('ejs');
 app.use(methodOverride('_method'));
 
 //========== Routes ==============
@@ -40,7 +41,7 @@ app.get('/pokedex/:id', (req, res) => {
         //===== New / GET =====
         //Create New Link to form (Set up Modal if possible)
 app.get('/new', (req, res) => {
-    res.render('new.ejs');
+    res.render('new.ejs', {poke});
 });
         //===== Edit / GET =====
 app.get('/pokedex/:id/edit', (req, res) => {
@@ -51,21 +52,33 @@ app.get('/pokedex/:id/edit', (req, res) => {
 app.post("/pokedex", (req, res) => {
          //Set the info in the form to a new item in an object
     poke.push(req.body);
-    console.log(poke);
+    console.log(req.body);
          //Redirect the page after creating new content to the main page
     res.redirect('http://localhost:3000/pokedex');
 });
         //===== Update / PUT =====
-app.put('/pokedex/:id', (req, res) => {
+// app.put('/pokedex/:id', (req, res) => {
         //Set info from the selected id to the new information user inputs
         // poke[req.params.id] = req.body;
-    poke[req.params.id].type = JSON.parse(JSON.stringify(req.body.type));
-     poke[req.params.id].name = JSON.parse(JSON.stringify(req.body.name));
-    console.log(poke[req.params.id]);
-    //  console.log(poke[req.params.id].type);
-         //Redirect the page after updating to the main page
-    res.redirect('/pokedex');
+    //Update
+app.put('/pokemon/:pokeIndex', (req, res) => {
+  req.body.stats = {};
+  req.body.stats.hp = req.body.hp;
+  req.body.stats.attack = req.body.attack;
+  req.body.stats.defense = req.body.defense;
+  req.body.stats.spattack = req.body.spattack;
+  req.body.stats.spdefense = req.body.spdefense;
+  req.body.stats.speed = req.body.speed;
+  console.log(req.body.stats);
+  pokemonList[req.params.pokeIndex] = req.body;
+  res.redirect('/pokemon');
 });
+//     poke[req.params.id].type = JSON.parse(JSON.stringify(req.body.type));
+//      poke[req.params.id].name = JSON.parse(JSON.stringify(req.body.name));
+//     console.log(poke[req.params.id]);
+//     //  console.log(poke[req.params.id].type);
+//          //Redirect the page after updating to the main page
+//     res.redirect('/pokedex');
         //===== Destroy / DELETE =====
 app.delete('/pokedex/:id', (req, res) => {
         //Select the item by id and remove only one item
