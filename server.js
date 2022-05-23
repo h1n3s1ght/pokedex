@@ -59,26 +59,20 @@ app.post("/pokedex", (req, res) => {
         //===== Update / PUT =====
 // app.put('/pokedex/:id', (req, res) => {
         //Set info from the selected id to the new information user inputs
-        // poke[req.params.id] = req.body;
     //Update
-app.put('/pokemon/:pokeIndex', (req, res) => {
+app.put('/pokedex/:id', (req, res) => {
+poke[req.params.id] = req.body
   req.body.stats = {};
-  req.body.stats.hp = req.body.hp;
-  req.body.stats.attack = req.body.attack;
-  req.body.stats.defense = req.body.defense;
-  req.body.stats.spattack = req.body.spattack;
-  req.body.stats.spdefense = req.body.spdefense;
-  req.body.stats.speed = req.body.speed;
-  console.log(req.body.stats);
-  pokemonList[req.params.pokeIndex] = req.body;
-  res.redirect('/pokemon');
+  req.body.stats.hp = JSON.parse(JSON.stringify(req.body.hp));
+  req.body.stats.attack = JSON.parse(JSON.stringify(req.body.attack));
+  req.body.stats.defense = JSON.parse(JSON.stringify(req.body.defense));
+  req.body.stats.spattack = JSON.parse(JSON.stringify(req.body.spattack));
+  req.body.stats.spdefense = JSON.parse(JSON.stringify(req.body.spdefense));
+  req.body.stats.speed = JSON.parse(JSON.stringify(req.body.speed));
+  console.log(JSON.parse(JSON.stringify(req.body.stats)));
+  poke[req.params.id] = JSON.parse(JSON.stringify(req.body));
+  res.redirect('/pokedex');
 });
-//     poke[req.params.id].type = JSON.parse(JSON.stringify(req.body.type));
-//      poke[req.params.id].name = JSON.parse(JSON.stringify(req.body.name));
-//     console.log(poke[req.params.id]);
-//     //  console.log(poke[req.params.id].type);
-//          //Redirect the page after updating to the main page
-//     res.redirect('/pokedex');
         //===== Destroy / DELETE =====
 app.delete('/pokedex/:id', (req, res) => {
         //Select the item by id and remove only one item

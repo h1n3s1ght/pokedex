@@ -10,35 +10,36 @@
     <%- include('./partials/header.ejs')%>
 </header>
 <div class="show" id="formula2">
-<form action="/pokedex/<%=index;%>?_method=PUT" method="POST">
+<form action="/pokedex/<%=(index ++)%>?_method=PUT" method="POST">
       Name: <input type="text" name="name" value="<%= poke.name%>"/><br />
-      Type: <input type="text" name="type" value="<%= poke.type%>"/><br />
-      <br />
-
-
-      <!-- Create Hidden Variables for the portions that we dont want users to change. -->
-      <input value="<%=poke.id%>" type="hidden" name="id">
-      <input value="<%=poke.img%>" type="hidden" name="img">
-      <input value="<%=poke.stats%>" type="hidden" name="stats">
-      <input value="<%=poke.damages.normal%>" type="hidden" name="damages.normal">
-      <input value="<%=poke.damages.fire%>" type="hidden" name="damages.fire">
-      <input value="<%=poke.damages.water%>" type="hidden" name="damages.water">
-      <input value="<%=poke.damages.electric%>" type="hidden" name="damages.electric">
-      <input value="<%=poke.damages.grass%>" type="hidden" name="damages.grass">
-      <input value="<%=poke.damages.ice%>" type="hidden" name="damages.ice">
-      <input value="<%=poke.damages.fight%>" type="hidden" name="damages.fight">
-      <input value="<%=poke.damages.poison%>" type="hidden" name="damages.poison">
-      <input value="<%=poke.damages.ground%>" type="hidden" name="damages.ground">
-      <input value="<%=poke.damages.flying%>" type="hidden" name="damages.flying">
-      <input value="<%=poke.damages.psychic%>" type="hidden" name="damages.psychic">
-      <input value="<%=poke.damages.bug%>" type="hidden" name="damages.bug">
-      <input value="<%=poke.damages.rock%>" type="hidden" name="damages.rock">
-      <input value="<%=poke.damages.ghost%>" type="hidden" name="damages.ghost">
-      <input value="<%=poke.damages.dragon%>" type="hidden" name="damages.dragon">
-      <input value="<%=poke.damages.dark%>" type="hidden" name="damages.dark">
-      <input value="<%=poke.damages.steel%>" type="hidden" name="damages.steel">
-
-
+      Type: <input type="text" name="type" value="<%= poke.type%>"/> <br />
+      ID: <input type="number" required name="id" value="<%=parseInt(poke.id)%>"/> <br />
+       Image Link (leave URL): <input type="text" name="img" value="<%=poke.img%>" <br />
+      <br /> <br /><h5>Stats(0-100) |</h5>
+              HP | <br /> <br /><input value="50" type="number" min="0" max="100" name="hp">
+              Attack | <br /> <br /><input value="50" type="number" min="0" max="100" name="attack">
+              Defense | <br /> <br /><input value="50" type="number" min="0" max="100" name="defense">
+             Speed Attack | <br /> <br /><input value="50" type="number" min="0" max="100" name="spattack">
+              Speed Defense | <br /> <br /><input value="50" type="number" min="0" max="100" name="spdefense">
+              Speed | <br /> <br /><input value="50" type="number" min="0" max="100" name="speed">
+    <br /> <br /><h5>Damages Against (0-3) |</h5>
+      Normal | <br /> <br /><input value="1" type="number" min="0" max="3" name="normal">
+      Fire | <br /> <br /><input value="0" type="number" min="0" max="3" name="fire">
+      Water | <br /> <br /><input value="1" type="number" min="0" max="3"name="water">
+      Electric | <br /> <br /><input value="1" type="number" min="0" max="3" name="electric">
+      Grass | <br /> <br /><input value="0"type="number" min="0" max="3" name="grass">
+      Ice | <br /> <br /><input value="1" type="number" min="0" max="3" name="ice">
+      Fight | <br /> <br /><input value="1" type="number" min="0" max="3" name="fight">
+      Poison | <br /> <br /><input value="0" type="number" min="0" max="3" name="poison">
+      Ground | <br /> <br /><input value="2" type="number" min="0" max="3" name="ground">
+     Flying |  <br /> <br /><input value="0" type="number" min="0" max="3" name="flying">
+      Psychic | <br /> <br /><input value="2" type="number" min="0" max="3" name="psychic">
+      Bug | <br /> <br /><input value="2" type="number" min="0" max="3" name="bug">
+      Rock |<br /> <br /><input value="3" type="number" min="0" max="3" name="rock">
+     Ghost | <br /> <br /> <input value="0" type="number" min="0" max="3" name="ghost">
+      Dragon | <br /> <br /><input value="1" type="number" min="0" max="3" name="dragon">
+      Dark | <br /> <br /><input value="2" type="number" min="0" max="3" name="dark">
+     Steel | <br /> <br /> <input value="1" type="number" min="0" max="3" name="steel">
 
       <button type="submit" >Submit Changes</button>
       <a href="http://localhost:3000/pokedex"><button type="button">Nevermind | Back to Home</a></button>
