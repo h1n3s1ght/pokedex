@@ -25,11 +25,11 @@
                   HP:
               </td>
               <td>
-                <% if(parseInt(poke.id) <= 151) { %>
+                <%if(parseInt(poke.id) === typeof number) { %>
                   <%= poke.stats.hp%>
                 <% } else {%>
                   <%= poke.hp%>
-               <% } %>
+               <% }%>
               </td>
           </tr>
           <tr>
@@ -101,7 +101,7 @@
           <tr>
             <td>Normal</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                   <%= poke.damages.normal%>
                 <% } else {%>
                   <%= poke.normal%>
@@ -111,7 +111,7 @@
           <tr>
             <td>Fire</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                   <%= poke.damages.fire%>
                 <% } else {%>
                   <%= poke.fire%>
@@ -121,7 +121,7 @@
           <tr>
             <td>Water</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number){ %>
                   <%= poke.damages.water%>
                 <% } else {%>
                   <%= poke.water%>
@@ -131,7 +131,7 @@
           <tr>
             <td>Electric</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                   <%= poke.damages.electric%>
                 <% } else {%>
                   <%= poke.electric%>
@@ -141,7 +141,7 @@
           <tr>
             <td>Grass</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                  <%= poke.damages.grass%>
                 <% } else {%>
                   <%= poke.grass%>
@@ -151,7 +151,7 @@
           <tr>
             <td>Ice</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                   <%= poke.damages.ice%>
                 <% } else {%>
                   <%= poke.ice%>
@@ -161,7 +161,7 @@
           <tr>
             <td>Fighting</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                   <%= poke.damages.fight%>
                 <% } else {%>
                   <%= poke.fight%>
@@ -171,7 +171,7 @@
           <tr>
             <td>Poison</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                   <%= poke.damages.poison%>
                 <% } else {%>
                   <%= poke.poison%>
@@ -181,7 +181,7 @@
           <tr>
             <td>Ground</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                   <%= poke.damages.ground%>
                 <% } else {%>
                   <%= poke.ground%>
@@ -191,7 +191,7 @@
           <tr>
             <td>Flying</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                  <%= poke.damages.flying%>
                 <% } else {%>
                   <%= poke.flying%>
@@ -201,7 +201,7 @@
           <tr>
             <td>Psychic</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                   <%= poke.damages.psychic%>
                 <% } else {%>
                   <%= poke.psychic%>
@@ -211,7 +211,7 @@
           <tr>
             <td>Bug</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                  <%= poke.damages.bug%>
                 <% } else {%>
                  <%= poke.bug%>
@@ -221,7 +221,7 @@
           <tr>
             <td>Rock</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                  <%= poke.damages.rock%>
                 <% } else {%>
                   <%= poke.rock%>
@@ -231,7 +231,7 @@
           <tr>
             <td>Ghost</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                   <%= poke.damages.ghost%>
                 <% } else {%>
                   <%= poke.ghost%>
@@ -241,7 +241,7 @@
           <tr>
             <td>Dragon</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                   <%= poke.damages.dragon%>
                 <% } else {%>
                   <%= poke.dragon%>
@@ -251,7 +251,7 @@
           <tr>
             <td>Dark</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                   <%= poke.damages.dark%>
                 <% } else {%>
                   <%= poke.dark%>
@@ -261,7 +261,7 @@
           <tr>
             <td>Steel</td>
             <td>
-              <% if(parseInt(poke.id) <= 151) { %>
+              <% if(poke.damages === typeof number) { %>
                   <%= poke.damages.steel%>
                 <% } else {%>
                   <%= poke.steel%>
