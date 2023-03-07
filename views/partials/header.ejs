@@ -1,7 +1,7 @@
-<div id="hamburger-menu"><nav>
+<div id="hamburger-menu" class="<%- (screenSize > 960) ? 'large-screen': ((screenSize >= 521) ? 'medium-screen': 'small-screen')%>"><nav>
         <ul class="navbar">
-            <li><a href="http://localhost:3000/pokedex"><button>Home</button></a></li>
-            <li><a href="http://localhost:3000/new"><button>Make a New Pokemon</a></button></li>
+            <li class="navbar-li"><a href="https://benjaminisaachines.com/pokedex"><button>Home</button></a></li>
+            <li class="navbar-li"><a href="/pokemon/new"><button>Make a New Pokemon</a></button></li>
         </ul>
     </nav>
 </div>

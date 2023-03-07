@@ -3,10 +3,6 @@
 <head>
     <title>Create New Pokemon</title>
     <%- include('./partials/head.ejs')%>
-    <script>
-    // let newID = (parseInt(poke.length) +1);
-    console.log(req.body);
-    </script>
 </head>
 <body>
     <header>
@@ -19,7 +15,8 @@
         <div class="show" id="formula">
         <form action="/pokedex" method="POST">
             Name: <input type="text" required name="name" value="snivy"/> <br />
-             ID: <input type="number" required name="id" min="152" value="152"/> <br />
+             ID: <input type="number" required name="id" min="152" 
+             value="<%= (pokeLength + 1) %>"/> <br />
             Type: <input type="text" required name="type" value="grass"/> <br />
             Image Link (leave URL): <input type="text" name="img" value="https://www.smogon.com/articles/images/spotlight-snivy.png"/> <br />
             <br /> <br /><h5>Stats(0-100) |</h5>

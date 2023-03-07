@@ -1,12 +1,15 @@
-//========== Variables ===========
+        //========== Variables ===========
         //Set up Express and App variables for future use
 const express = require('express');
+const userAgent = require('express-useragent');
         //Bring Data from pokemon.js
 const poke = require('./models/pokemon');
 
 const app = express();
 
-//========== Listener ============
+app.use(userAgent.express());
+
+        //========== Listener ============
         //Set up PORT number as standard 3000
 const PORT = 3000;
         //Server is listening on PORT and console logging to which port that refers
@@ -14,7 +17,7 @@ app.listen(PORT, ()=> {
     console.log("listening on port: ", PORT);
 })
 
-//========== Middleware ==========
+        //========== Middleware ==========
         //Include Static Files
 app.use(express.static('public'));
 app.use(express.urlencoded({extended: false}));
@@ -23,7 +26,7 @@ const methodOverride = require('method-override');
 const { resolveInclude } = require('ejs');
 app.use(methodOverride('_method'));
 
-//========== Routes ==============
+        //========== Routes ==============
         //===== Index / GET =====
         // Standard Re-Route
 app.get('/', (req, res) => {
@@ -31,21 +34,32 @@ app.get('/', (req, res) => {
 });
         //Main Index Setup
 app.get('/pokedex', (req, res)=> {
-    res.render('index.ejs', {poke});
+    let isMobile = req.useragent.isMobile;
+    let screenSize = req.useragent.screenWidth;
+    res.render('index.ejs', {poke , screenSize , isMobile});
+    console.log(req.useragent);
 });
         //===== Show / GET =====
         //Show Pokemon Info
 app.get('/pokedex/:id', (req, res) => {
-    res.render('show.ejs', {poke: poke[req.params.id]});
+    let isMobile = req.useragent.isMobile;
+    let screenSize = req.useragent.screenWidth;
+    res.render('show.ejs', {poke: poke[req.params.id] , isMobile, screenSize});
 });
         //===== New / GET =====
         //Create New Link to form (Set up Modal if possible)
 app.get('/new', (req, res) => {
-    res.render('new.ejs', {poke});
+    let isMobile = req.useragent.isMobile;
+    let screenSize = req.useragent.screenWidth;
+    let pokeLength = Object.keys(poke).length;
+    res.render('new.ejs', {poke , pokeLength , isMobile, screenSize});
+    console.log(pokeLength);
 });
         //===== Edit / GET =====
 app.get('/pokedex/:id/edit', (req, res) => {
-    res.render('edit.ejs', {poke: poke[req.params.id], index: req.params.id});
+    let isMobile = req.useragent.isMobile;
+    let screenSize = req.useragent.screenWidth;
+    res.render('edit.ejs', {poke: poke[req.params.id], index: req.params.id , isMobile, screenSize});
 });
         //===== Create / POST =====
         //Post new info from form into the object
