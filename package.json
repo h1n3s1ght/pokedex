@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "display pokemon",
   "main": "server.js",
-  "homepage": "https://pokedex.benjaminisaachines.com",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "build": "ejs-cli templates/ -o public/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d public"
   },
@@ -19,8 +17,7 @@
     "express-useragent": "^1.0.15",
     "method-override": "^3.0.0"
   },
-  "devDependencies": {
-    "ejs-cli": "^2.2.3",
-    "gh-pages": "^6.0.0"
+  "engines": {
+    "node": "^14"
   }
 }

@@ -11,7 +11,7 @@ app.use(userAgent.express());
 
         //========== Listener ============
         //Set up PORT number as standard 3000
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
         //Server is listening on PORT and console logging to which port that refers
 app.listen(PORT, ()=> {
     console.log("listening on port: ", PORT);
