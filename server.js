@@ -30,7 +30,7 @@ app.use(methodOverride('_method'));
         //===== Index / GET =====
         // Standard Re-Route
 app.get('/', (req, res) => {
-    res.send("Nearly there... click here to visit the: <a href='http://localhost:3000/pokedex'style='text-decoration: none; color: black;'>Pokedex<a>");
+    res.redirect('/pokedex')
 });
         //Main Index Setup
 app.get('/pokedex', (req, res)=> {
@@ -68,7 +68,7 @@ app.post("/pokedex", (req, res) => {
     poke.push(req.body);
     console.log(req.body);
          //Redirect the page after creating new content to the main page
-    res.redirect('http://localhost:3000/pokedex');
+    res.redirect('/pokedex');
 });
         //===== Update / PUT =====
 // app.put('/pokedex/:id', (req, res) => {
