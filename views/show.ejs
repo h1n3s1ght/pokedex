@@ -6,8 +6,12 @@
   </head>
   <body>
       <header>
-          <h1><strong>View | </strong> <%= poke.name%></h1>
-          <%- include('./partials/header.ejs')%>
+          <div class="header-container">
+            <div class="h1-container">
+                <h1 class="header-h1"><strong>View | </strong> <%= poke.name%></h1>
+            </div>
+            <%- include('./partials/header.ejs')%>
+          </div>
       </header>
        <div class="show" id="show">
            <h5><%=parseInt(poke.id)%>  |  <%= poke.name%></h5>
