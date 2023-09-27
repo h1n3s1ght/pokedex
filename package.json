@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d public"
+    "predeploy": "npm run build"
   },
   "author": "Ben Hines",
   "license": "ISC",
