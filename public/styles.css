@@ -89,6 +89,10 @@ ul.navbar {
   margin: 0 auto;
 }
 
+.navbar-li:first-child {
+    margin-right: 2% !important;
+}
+
 /* Show Styles */
 .show {
   width: 70%;
@@ -239,10 +243,6 @@ input {
   .navbar-li {
     min-width: 10%;
     padding: 2%;
-  }
-
-  .navbar-li:first-child {
-    margin-right: 2%;
   }
 
   #formStuff h5 {
