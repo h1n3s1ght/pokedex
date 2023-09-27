@@ -1,8 +1,10 @@
+/* Global Styles */
 html,
 body {
   margin: 0 auto;
   background-position: center;
   background-repeat: no-repeat;
+  color: white;
   width: 100%;
   height: 100%;
   background-image: url(./images/PokemonImg.png);
@@ -11,6 +13,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
+  min-width: 550px !important;
 }
 
 p {
@@ -18,82 +21,37 @@ p {
   height: 100%;
   width: 100%;
   padding: 0;
-  color: blue;
-}
-
-header {
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 0px 0px 10px 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-content: right;
-  margin: 0 auto;
-}
-
-header h1 {
-  color: white;
-  font-size: 1.5em;
-  width: 50%;
-  padding-top: 3%;
-  /* margin-right: 25%; */
-  padding-left: 3%;
-  top: 0%;
-}
-
-nav ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  left: 50%;
-  padding-top: 3%;
-  width: 100%;
-}
-
-nav li {
-  margin-top: 5%;
-  padding: 0% 1% 3% 1%;
-  width: 100%;
-}
-
-nav a {
-  text-align: left;
-  text-decoration: none;
   color: white;
 }
 
-nav a:hover {
-  color: gray;
-}
-
+/* Container Styles */
 .container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex-flow: row wrap;
   padding: 0;
   margin: 0 auto;
   width: 100%;
 }
 
 .container a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 .each {
   background-color: rgba(0, 0, 0, 0.85);
   border-radius: 15px;
   flex-wrap: wrap;
-  flex-flow: row wrap;
   width: 23%;
   align-items: center;
   text-align: center;
   margin: 4%;
   padding: 1%;
+}
+
+.each-edit {
+    margin: 3%;
 }
 
 .each h3 {
@@ -109,97 +67,111 @@ nav a:hover {
   margin-bottom: 2%;
 }
 
-button ,  a{
+.button,
+button,
+a {
   color: white;
 }
 
-button:hover , a:hover{
+.button:hover,
+button:hover,
+a:hover {
   color: #707070;
 }
 
+/* Navbar Styles */
+ul.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style-type: none !important;
+  margin: 0 auto;
+}
+
+/* Show Styles */
 .show {
-    width:70%;
-    margin-left: 15%;
-    display: flex;
-    flex-direction: row;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.8);
+  width: 70%;
+  margin-left: 15%;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-#show, #formStuff {
-    margin-top: 10%; 
-    border-radius: 15px 15px 0px 0px;
+/* Form Styles */
+#show,
+#formStuff {
+  margin-top: 10%;
+  border-radius: 15px 15px 0px 0px;
 }
 
-#formStuff  h5{
-    text-align: center;
-    align-content: center;
-    margin-left: 25%;
+#formStuff h5 {
+  text-align: center;
+  align-content: center;
+  margin-left: 25%;
 }
 
 #show h5 {
-    margin-top: 5%;
+  margin-top: 5%;
 }
 
 #showTwo {
-    margin-bottom: 10%;
+  margin-bottom: 10%;
 }
 
 .show img {
-    width: 300px;
-    height: 300px;
-    border-radius: 15px;
-    margin-left: 2%;
-    margin-top: 3%;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  margin-left: 2%;
+  margin-top: 3%;
 }
 
- .show a{
-   margin-left: 2%;
-  padding-top:5%;
+.show a {
+  margin-left: 2%;
+  padding-top: 5%;
 }
 
-#formula{
+/* Formula Styles */
+#formula {
   border-radius: 0px 0px 15px 15px;
 }
 
-#formula2{
+#formula2 {
   margin-top: 15%;
   border-radius: 15px;
 }
 
-#formula form, #formula2 form{
-    width: 50%;
-    margin-left: 25%;
-    display:flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-}
-
-.show a {
-    text-decoration: none;
-    color: white;
+#formula form,
+#formula2 form {
+  width: 50%;
+  margin-left: 25%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
 }
 
 .show h5 {
-    font-size: 1.25em;
-    margin:1% 3%;
+  font-size: 1.25em;
+  margin: 1% 3%;
 }
 
 .stats {
-    margin-left: 5%;
+  margin-left: 5%;
 }
 
 .damages {
-    margin-left: 5%;
+  margin-left: 5%;
 }
 
 input {
-    color: black;
+  color: black;
 }
 
-@media only screen and (min-width: 521px) and (max-width: 960px)  { 
-
+/* Media Queries */
+@media only screen and (min-width: 550px) and (max-width: 960px) {
   body {
     margin: 0 auto;
     background-position: center;
@@ -210,91 +182,164 @@ input {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size:cover;
+    background-size: cover;
     background-attachment: fixed;
   }
 
   .container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 0;
-  margin: 0 auto;
-  width: 100%;
-}
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+  }
+
   .each {
-  background-color: rgba(0, 0, 0, 0.85);
-  display: flex;
-  flex-direction: column;
-  border-radius: 15px;
-  width: 40%;
-  align-items: center;
-  text-align: center;
-  margin: 5%;
-  padding: 0%;
-}
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    width: 40%;
+    align-items: center;
+    text-align: center;
+    margin: 5%;
+    padding: 0%;
+  }
 
-.each h3 {
-  font-size: 1.8rem;
-}
+  .each h3 {
+    font-size: 1.8rem;
+  }
 
-.each a {
-  padding: 4% 0% 2% 0%;
-}
+  .each a {
+    padding: 4% 0% 2% 0%;
+  }
 
-.each img {
+  .each img {
     width: 100px;
     height: 100px;
     border-radius: 15px;
     margin-left: 2%;
     margin-top: 3%;
+  }
+
+  h1.h1-container {
+    color: white;
+    font-size: 1.75em;
+    width: 95%;
+  }
+
+  .h1-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    max-width: 45%;
+  }
+
+  .navbar-li {
+    min-width: 10%;
+    padding: 2%;
+  }
+
+  .navbar-li:first-child {
+    margin-right: 2%;
+  }
+
+  #formStuff h5 {
+    margin-left: 5%;
+  }
+
+  #formula.show form {
+    width: 70%;
+    padding-top: 5px;
+    margin-left: 5%;
+  }
+
+  .button a, button a {
+  color: white;
+  text-decoration: none;
+  display: flex; /* Make the links behave as flex items */
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
 }
 
-header {
+  .formula.show form {
+    align-content: left;
+  }
+}
+
+.large-screen {
+  padding: 3% 0% 3% 3%;
   width: 100%;
 }
 
-.header-h1 {
-  width: 30%;
+.medium-screen {
+  padding: 3%;
+  width: 100%;
 }
 
-.navbar ul{
-  width: 70%;
+.header-container {
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 0px 0px 10px 10px;
+  justify-content: space-evenly;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
+  padding: 2% 5%;
+}
+
+#hamburger-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: flex-end;
-  margin-top: 4%;
-}
-
-.navbar-li {
-  width: 30%;
-  padding: 0% 2% 0% 2%;
-}
-
-#formStuff h5{
-  margin-left: 5%;
-}
-#formula.show form{
-  width: 70%;
-  padding-top: 5px;
-  margin-left: 5%;
-}
-
-button, a {
-  font-size: .5em;
-}
-header h1 {
-  padding: 5% 0% 5% 3%;
-  font-size: 1.4em;
-  margin-right: 0 auto;
-}
-.formula.show form {
-  align-content: left;
-}
 }
 
 
-@media only screen and (max-width: 520px) {
+/* Large-Screen Header */
+.large-screen .navbar-li {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; 
+}
 
-  
+.large-screen .button {
+  font-size: 1em; /* Larger font size for buttons */
+  text-decoration: none; /* Remove underlines */
+  color: white; /* Set text color */
+  border: 1px solid white; /* Add border to buttons */
+  border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+/* Small-Screen Header */
+.small-screen .navbar-li {
+  min-width: 50%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center; /* Center vertically within the button border */
+}
+
+.small-screen .button {
+  font-size: 0.8em; /* Smaller font size for buttons */
+  text-decoration: none; /* Remove underlines */
+  color: white; /* Set text color */
+  border: 1px solid white; /* Add border to buttons */
+  border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+
+@media only screen and (max-width: 549px) {
+  .container {
+    flex-direction: column;
+    width: 50%;
+  }
+  .each {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+  }
+
 }

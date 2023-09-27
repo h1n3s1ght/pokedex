@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script>
-      const innerWidth = window.innerWidth;
-    </script>
     <%- include('./partials/head.ejs')%>
     <title>Pokedex Homepage</title>
   </head>
   <body>
     <header>
-      <h1 class="header-h1">Welcome to the Pokedex</h1>
-      <%- include('./partials/header.ejs')%>
+      <div class="header-container">
+        <div class="h1-container">
+          <h1 class="header-h1">Welcome to the Pokedex</h1>
+        </div>
+        <%- include('./partials/header.ejs')%>
+      </div>
     </header>
     <div class="container">
       <% for (let i = 0; i < poke.length; i++){ %>
       <div class="each">
         <a href="/pokedex/<%= i%>">
           <h3><%= parseInt(poke[i].id)%> | <%= poke[i].name%></h3>
-          <img src="<%= poke[i].img%>"
+          <img alt="Image shows: <%= poke[i].name%>" src="<%= poke[i].img%>"
         /></a>
-        <a href="/pokedex/<%=i %>/edit"><button>EDIT</button></a>
+        <a href="/pokedex/<%=i %>/edit"><button class="each-edit">EDIT</button></a>
         <form action="/pokedex/<%=i; %>?_method=DELETE" method="POST">
           <button type="submit" value="DELETE">DELETE</button>
         </form>

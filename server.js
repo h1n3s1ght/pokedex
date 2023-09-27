@@ -4,8 +4,11 @@ const express = require('express');
 const userAgent = require('express-useragent');
         //Bring Data from pokemon.js
 const poke = require('./models/pokemon');
-
 const app = express();
+
+const cookieParser = require('cookie-parser');
+
+app.use(cookieParser());
 
 app.use(userAgent.express());
 
@@ -30,14 +33,15 @@ app.use(methodOverride('_method'));
         //===== Index / GET =====
         // Standard Re-Route
 app.get('/', (req, res) => {
-    res.redirect('/pokedex')
+        res.render('landing.ejs');
 });
         //Main Index Setup
 app.get('/pokedex', (req, res)=> {
-    let isMobile = req.useragent.isMobile;
-    let screenSize = req.useragent.screenWidth;
-    res.render('index.ejs', {poke , screenSize , isMobile});
-    console.log(req.useragent);
+  const innerWidth = req.cookies.innerWidth; 
+  const isMobile = req.useragent.isMobile;
+  console.log(innerWidth);
+  res.render('index.ejs', { poke, screenSize: innerWidth, isMobile });
+  console.log(req.useragent);
 });
         //===== Show / GET =====
         //Show Pokemon Info
